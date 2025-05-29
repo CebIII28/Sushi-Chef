@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Chef - Доставка суши и роллов</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-fish me-2"></i>Sushi Chef
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="delivery.html">Доставка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Отзывы</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="btn btn-success">
+                        <i class="fas fa-shopping-cart me-1"></i> Корзина
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция с баннером -->
+    <section class="hero-banner mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold mb-4">Свежие суши и роллы с доставкой</h1>
+                    <p class="lead mb-4">Бесплатная доставка при заказе от 1500 руб. в течение часа!</p>
+                    <a href="#menu" class="btn btn-success btn-lg">Заказать сейчас</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/hero-sushi.png" alt="Суши и роллы" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Акции -->
+    <section class="promo-section mb-5 py-4 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Акции и специальные предложения</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card promo-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <span class="badge bg-danger mb-3">Акция</span>
+                            <h4>2+1 бесплатно</h4>
+                            <p>При заказе 2-х любых сетов - третий в подарок!</p>
+                            <img src="img/promo1.jpg" alt="Акция 2+1" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card promo-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <span class="badge bg-warning text-dark mb-3">Скидка</span>
+                            <h4>Скидка 20%</h4>
+                            <p>На все заказы от 2000 руб. по промокоду SUSHI20</p>
+                            <img src="img/promo2.jpg" alt="Скидка 20%" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card promo-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <span class="badge bg-success mb-3">Новинка</span>
+                            <h4>Бесплатный напиток</h4>
+                            <p>К каждому заказу от 1000 руб. дарим напиток на выбор</p>
+                            <img src="img/promo3.jpg" alt="Бесплатный напиток" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section class="menu-section mb-5" id="menu">
+        <div class="container">
+            <h2 class="text-center mb-4">Наше меню</h2>
+            
+            <!-- Фильтры меню -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="btn-group d-flex flex-wrap" role="group">
+                        <button type="button" class="btn btn-outline-success active">Все</button>
+                        <button type="button" class="btn btn-outline-success">Сеты</button>
+                        <button type="button" class="btn btn-outline-success">Роллы</button>
+                        <button type="button" class="btn btn-outline-success">Суши</button>
+                        <button type="button" class="btn btn-outline-success">Горячие блюда</button>
+                        <button type="button" class="btn btn-outline-success">Напитки</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Товары -->
+            <div class="row g-4">
+                <!-- Сет 1 -->
+                <div class="col-md-4 col-6">
+                    <div class="card product-card h-100">
+                        <img src="img/set1.jpg" class="card-img-top" alt="Сет Филадельфия">
+                        <div class="card-body">
+                            <h5 class="card-title">Сет Филадельфия</h5>
+                            <p class="card-text">
+                                <span class="badge bg-success mb-2">Хит</span><br>
+                                24 шт: роллы с лососем, авокадо и сыром
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">1 490 ₽</span>
+                                <button class="btn btn-sm btn-outline-success">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Сет 2 -->
+                <div class="col-md-4 col-6">
+                    <div class="card product-card h-100">
+                        <img src="img/set2.jpg" class="card-img-top" alt="Сет Калифорния">
+                        <div class="card-body">
+                            <h5 class="card-title">Сет Калифорния</h5>
+                            <p class="card-text">
+                                <span class="badge bg-danger mb-2">Новинка</span><br>
+                                30 шт: роллы с крабом, огурцом и икрой
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">1 790 ₽</span>
+                                <button class="btn btn-sm btn-outline-success">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Сет 3 -->
+                <div class="col-md-4 col-6">
+                    <div class="card product-card h-100">
+                        <img src="img/set3.jpg" class="card-img-top" alt="Сет Большой">
+                        <div class="card-body">
+                            <h5 class="card-title">Сет Большой</h5>
+                            <p class="card-text">
+                                <span class="badge bg-warning text-dark mb-2">Акция</span><br>
+                                42 шт: ассорти из роллов, суши и сашими
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">2 990 ₽ <small class="text-muted text-decoration-line-through">3 490 ₽</small></span>
+                                <button class="btn btn-sm btn-outline-success">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ролл 1 -->
+                <div class="col-md-4 col-6">
+                    <div class="card product-card h-100">
+                        <img src="img/roll1.jpg" class="card-img-top" alt="Ролл Филадельфия">
+                        <div class="card-body">
+                            <h5 class="card-title">Филадельфия</h5>
+                            <p class="card-text">
+                                <span class="badge bg-success mb-2">Хит</span><br>
+                                8 шт: лосось, авокадо, сыр, рис, нори
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">490 ₽</span>
+                                <button class="btn btn-sm btn-outline-success">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ролл 2 -->
+                <div class="col-md-4 col-6">
+                    <div class="card product-card h-100">
+                        <img src="img/roll2.jpg" class="card-img-top" alt="Ролл Калифорния">
+                        <div class="card-body">
+                            <h5 class="card-title">Калифорния</h5>
+                            <p class="card-text">
+                                <span class="badge bg-info mb-2">Популярный</span><br>
+                                8 шт: краб, огурец, икра, рис, нори
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">450 ₽</span>
+                                <button class="btn btn-sm btn-outline-success">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ролл 3 -->
+                <div class="col-md-4 col-6">
+                    <div class="card product-card h-100">
+                        <img src="img/roll3.jpg" class="card-img-top" alt="Ролл Унаги">
+                        <div class="card-body">
+                            <h5 class="card-title">Унаги</h5>
+                            <p class="card-text">
+                                <span class="badge bg-dark mb-2">Эксклюзив</span><br>
+                                8 шт: угорь, огурец, соус унаги, рис, нори
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">590 ₽</span>
+                                <button class="btn btn-sm btn-outline-success">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-success">Показать больше</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="benefits-section mb-5 py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Почему выбирают нас</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-6 text-center">
+                    <div class="benefit-icon mb-3">
+                        <i class="fas fa-fish fa-3x text-success"></i>
+                    </div>
+                    <h4>Свежие продукты</h4>
+                    <p>Используем только свежие морепродукты и овощи</p>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="benefit-icon mb-3">
+                        <i class="fas fa-clock fa-3x text-success"></i>
+                    </div>
+                    <h4>Быстрая доставка</h4>
+                    <p>Доставим ваш заказ в течение 60 минут</p>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="benefit-icon mb-3">
+                        <i class="fas fa-award fa-3x text-success"></i>
+                    </div>
+                    <h4>Опытные повара</h4>
+                    <p>Наши сушисты с опытом работы более 5 лет</p>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="benefit-icon mb-3">
+                        <i class="fas fa-percentage fa-3x text-success"></i>
+                    </div>
+                    <h4>Выгодные цены</h4>
+                    <p>Регулярные акции и скидки для постоянных клиентов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews-section mb-5" id="reviews">
+        <div class="container">
+            <h2 class="text-center mb-4">Отзывы наших клиентов</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h5 class="card-title">Анна</h5>
+                            <p class="card-text">Заказывала сет "Филадельфия" на день рождения. Все было свежее, вкусное и красиво упаковано. Доставили вовремя, курьер был вежлив. Обязательно закажу еще!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <h5 class="card-title">Дмитрий</h5>
+                            <p class="card-text">Постоянно заказываю здесь обед на работу. Всегда свежее и вкусное. Особенно нравятся горячие роллы. Цены адекватные, доставка быстрая.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h5 class="card-title">Елена</h5>
+                            <p class="card-text">Попробовала акцию "2+1" - получила три сета по цене двух! Все было очень вкусно, особенно понравился сет "Большой". Порции большие, хватило на компанию из 4 человек.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма подписки -->
+    <section class="subscribe-section mb-5 py-5 bg-success text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-4">Подпишитесь на наши новости и акции</h2>
+                    <p class="mb-4">Получайте эксклюзивные предложения и скидки первыми!</p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Ваш email">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-light btn-lg w-100">Подписаться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Sushi Chef</h5>
+                    <p>Доставка свежих суши и роллов в вашем городе. Работаем с 2010 года.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-vk fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-telegram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Контакты</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> г. Москва, ул. Сушильная, 15</p>
+                    <p><i class="fas fa-phone me-2"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@sushi-chef.ru</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Часы работы</h5>
+                    <p>Пн-Пт: 10:00 - 23:00</p>
+                    <p>Сб-Вс: 11:00 - 00:00</p>
+                    <p>Доставка: круглосуточно</p>
+                    <a href="delivery.html" class="btn btn-outline-light btn-sm mt-2">Условия доставки</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 Sushi Chef. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Политика конфиденциальности</a>
+                    <a href="#" class="text-white">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно входа -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Вход в личный кабинет</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Пароль</label>
+                            <input type="password" class="form-control" id="loginPassword">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Запомнить меня</label>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Войти</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Забыли пароль?</a>
+                        <p class="mt-2">Нет аккаунта? <a href="#" class="text-success">Зарегистрируйтесь</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
